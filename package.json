@@ -7,7 +7,12 @@
     "email": "info@64robots.com"
   },
   "license": "MIT",
-  "files": ["src", "dist", "LICENSE", "README.md"],
+  "files": [
+    "src",
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
   "main": "dist/index.js",
   "unpkg": "dist/index.umd.min.js",
   "jsdelivr": "dist/index.umd.min.js",
@@ -34,37 +39,37 @@
     "pre-commit": "cross-env PRE_COMMIT=true lint-staged"
   },
   "peerDependencies": {
-    "jspanel4": "^4.7.0",
-    "vue": "^2.6.10"
+    "jspanel4": "^4.3.0",
+    "vue": "^2.5.17"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.4",
-    "@vue/cli-plugin-babel": "^4.0.0",
-    "@vue/cli-plugin-e2e-cypress": "^4.0.0",
-    "@vue/cli-plugin-eslint": "^4.0.1",
-    "@vue/cli-plugin-unit-jest": "^4.0.0",
-    "@vue/cli-service": "^4.0.0",
-    "@vue/eslint-config-prettier": "^5.0.0",
+    "@babel/core": "^7.1.2",
+    "@vue/cli-plugin-babel": "^3.1.0",
+    "@vue/cli-plugin-e2e-cypress": "^3.1.0",
+    "@vue/cli-plugin-eslint": "^3.1.0",
+    "@vue/cli-plugin-unit-jest": "^3.1.0",
+    "@vue/cli-service": "^3.1.0",
+    "@vue/eslint-config-prettier": "^4.0.0",
     "@vue/eslint-config-standard": "^4.0.0",
-    "@vue/test-utils": "1.0.0-beta.29",
-    "babel-core": "6.26.3",
-    "babel-jest": "^24.9.0",
-    "babel-loader": "^8.0.6",
-    "cross-env": "^6.0.3",
-    "eslint-plugin-vue": "5.2.3",
-    "imagemin-lint-staged": "^0.4.0",
-    "lint-staged": "^9.4.2",
-    "lodash": "^4.17.15",
-    "markdownlint-cli": "^0.18.0",
+    "@vue/test-utils": "1.0.0-beta.25",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^8.0.4",
+    "cross-env": "^5.2.0",
+    "eslint-plugin-vue": "5.0.0-beta.3",
+    "imagemin-lint-staged": "^0.3.0",
+    "lint-staged": "^8.0.4",
+    "lodash": "^4.17.11",
+    "markdownlint-cli": "^0.13.0",
     "ncp": "^2.0.0",
-    "stylelint": "^11.1.1",
-    "stylelint-config-css-modules": "^1.5.0",
-    "stylelint-config-prettier": "^6.0.0",
-    "stylelint-config-recess-order": "^2.0.3",
-    "stylelint-config-standard": "^19.0.0",
-    "vue": "^2.6.10",
-    "vue-template-compiler": "^2.6.10",
-    "vuepress": "^1.2.0"
+    "stylelint": "^9.7.1",
+    "stylelint-config-css-modules": "^1.3.0",
+    "stylelint-config-prettier": "^4.0.0",
+    "stylelint-config-recess-order": "^2.0.0",
+    "stylelint-config-standard": "^18.2.0",
+    "vue": "^2.5.17",
+    "vue-template-compiler": "^2.5.17",
+    "vuepress": "^0.14.4"
   },
   "babel": {
     "presets": [
@@ -75,9 +80,15 @@
         }
       ]
     ],
-    "plugins": ["transform-vue-jsx"]
+    "plugins": [
+      "transform-vue-jsx"
+    ]
   },
-  "browserslist": ["> 1%", "last 2 versions", "not ie <= 8"],
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
   "eslintConfig": {
     "root": true,
     "parserOptions": {
@@ -94,7 +105,10 @@
       "no-console": [
         "warn",
         {
-          "allow": ["warn", "error"]
+          "allow": [
+            "warn",
+            "error"
+          ]
         }
       ],
       "vue/component-name-in-template-casing": [
@@ -126,7 +140,11 @@
     },
     "overrides": [
       {
-        "files": ["src/**/*", "demo/**/*", "tests/unit/**/*"],
+        "files": [
+          "src/**/*",
+          "demo/**/*",
+          "tests/unit/**/*"
+        ],
         "parserOptions": {
           "parser": "babel-eslint",
           "sourceType": "module"
@@ -136,18 +154,24 @@
         }
       },
       {
-        "files": ["tests/e2e/**/*"],
+        "files": [
+          "tests/e2e/**/*"
+        ],
         "parserOptions": {
           "parser": "babel-eslint",
           "sourceType": "module"
         },
-        "plugins": ["cypress"],
+        "plugins": [
+          "cypress"
+        ],
         "env": {
           "cypress/globals": true
         }
       },
       {
-        "files": ["**/*.unit.js"],
+        "files": [
+          "**/*.unit.js"
+        ],
         "parserOptions": {
           "parser": "babel-eslint",
           "sourceType": "module"
@@ -169,19 +193,31 @@
     "/tests/unit/coverage/"
   ],
   "jest": {
-    "setupFiles": ["<rootDir>/tests/unit/setup"],
+    "setupFiles": [
+      "<rootDir>/tests/unit/setup"
+    ],
     "setupTestFrameworkScriptFile": "<rootDir>/tests/unit/matchers",
-    "testMatch": ["**/(*.)unit.js"],
-    "moduleFileExtensions": ["js", "json", "vue"],
+    "testMatch": [
+      "**/(*.)unit.js"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
     "transform": {
       "^.+\\.vue$": "vue-jest",
       "^.+\\.js$": "babel-jest"
     },
-    "transformIgnorePatterns": ["/node_modules/(?!jspanel4).+\\.js$"],
+    "transformIgnorePatterns": [
+      "/node_modules/(?!jspanel4).+\\.js$"
+    ],
     "moduleNameMapper": {
       "\\.(jpe?g|png|gif|webp|svg|mp4|webm|ogg|mp3|wav|flac|aac|woff2?|eot|ttf|otf)$": "<rootDir>/tests/unit/fixtures/empty-string.js"
     },
-    "snapshotSerializers": ["jest-serializer-vue"],
+    "snapshotSerializers": [
+      "jest-serializer-vue"
+    ],
     "coverageDirectory": "<rootDir>/tests/unit/coverage",
     "collectCoverageFrom": [
       "src/**/*.{js,vue}",
@@ -207,9 +243,20 @@
       "git add",
       "npm run unit -- --bail --findRelatedTests"
     ],
-    "*.css": ["stylelint --fix", "prettier --write --loglevel warn", "git add"],
-    "*.md": ["markdownlint", "prettier --write --loglevel warn", "git add"],
-    "*.{png,jpeg,jpg,gif,svg}": ["imagemin-lint-staged", "git add"]
+    "*.css": [
+      "stylelint --fix",
+      "prettier --write --loglevel warn",
+      "git add"
+    ],
+    "*.md": [
+      "markdownlint",
+      "prettier --write --loglevel warn",
+      "git add"
+    ],
+    "*.{png,jpeg,jpg,gif,svg}": [
+      "imagemin-lint-staged",
+      "git add"
+    ]
   },
   "postcss": {
     "plugins": {
@@ -249,7 +296,11 @@
       "selector-max-type": [
         0,
         {
-          "ignore": ["child", "descendant", "compounded"]
+          "ignore": [
+            "child",
+            "descendant",
+            "compounded"
+          ]
         }
       ]
     }
